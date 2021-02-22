@@ -1,0 +1,54 @@
+@import '../../common/styles/colors';
+
+.slider {
+    &-label {
+        display: block;
+        font-size: 35px;
+        text-align: center;
+        margin-bottom: 60px;
+        color: $blue-1;
+    }
+    &-input {
+        overflow: hidden;
+        -webkit-appearance: none;
+        background-color: $gray-2;
+        height: 20px;
+        width: 100%;
+        border-radius: 20px;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &:focus {
+            outline: 0 none;
+        }
+          
+        &::-webkit-slider-thumb {
+            width: 20px;
+            height: 20px;
+            cursor: ew-resize;
+            background: $gray-3;
+            border-radius: 20px;
+            top: 0;
+            box-shadow: -3000px 0px 0px 2990px $blue-2;
+            -webkit-appearance: none;
+        }
+          
+        &::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            background: #c4c4c4;
+            cursor: pointer;
+            border: 0 none;
+            box-shadow: -3000px 0px 0px 2990px $blue-2;
+        }
+    }
+    &-value {
+        display: block;
+        text-align: center;
+        font-size: 100px;
+        color: $blue-1
+    }
+}

@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Layout from './components/Layout';
+import SliderContextProvider from './providers/slidersContext';
 import './style.scss'
 
 ReactDOM.render(
-    <>
-        <h1>Hola mundo</h1>
-    </>, document.getElementById('root')
+    <SliderContextProvider>
+        <Layout></Layout>
+    </SliderContextProvider>
+    , document.getElementById('root')
 )
