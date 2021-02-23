@@ -14,7 +14,7 @@
  ```
  npm run test
  ```
-4. Generate Production bundle
+4. Generate Production bundle, it should be located at the root of this project in the *public* folder.
  ```
  npm run build
  ```
