@@ -14,6 +14,10 @@
  ```
  npm run test
  ```
+4. Generate Production bundle
+ ```
+ npm run build
+ ```
  
  
  Author: yonnylsb@gmail.com
