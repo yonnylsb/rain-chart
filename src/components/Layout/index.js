@@ -53,7 +53,7 @@ function Layout(props){
                     minY={0}
                     maxY={200}
                     stepY={20}
-                    textY="% AMOUNT OF RAIN"
+                    textY="(mm) AMOUNT OF RAIN"
                     daysValues={daysValues}
                 />
             </Container>
