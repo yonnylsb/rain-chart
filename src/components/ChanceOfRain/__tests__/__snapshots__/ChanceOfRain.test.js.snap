@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChanceOfRain should render 1`] = `
+<svg
+  viewBox="0 0 800 460"
+>
+  <path
+    className="cor__upper"
+    d=""
+  />
+  <path
+    className="cor__med"
+    d=""
+  />
+  <path
+    className="cor__lower"
+    d=""
+  />
+  <line
+    className="cor__y-axis__line"
+    x1="50"
+    x2="50"
+    y1="0"
+    y2="410"
+  />
+  <line
+    className="cor__x-axis__line"
+    x1="50"
+    x2="780"
+    y1="410"
+    y2="410"
+  />
+  <text
+    className="cor__y-axis__text"
+    x={20}
+    y={60}
+  />
+  <text
+    className="cor__x-axis__text"
+    x={400}
+    y={450}
+  />
+  <g
+    className="cor__y-axis"
+  />
+  <g
+    className="cor__x-axis"
+  />
+</svg>
+`;
