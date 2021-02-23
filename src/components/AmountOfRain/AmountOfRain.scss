@@ -1,0 +1,35 @@
+@import '../../common/styles/colors.scss';
+
+.aor {
+    &__y-axis {
+        transform: matrix(1,0,0,1,30,-50);
+        font-size: 10px;
+        &__text{
+            transform: rotate(-90deg) translate(-290px, -48px);
+            font-size: 12px;
+            fill: $blue-1;
+        }
+        &__line{
+            stroke:$blue-1;
+            stroke-width:1;
+        }
+    }
+    
+    &__x-axis {
+        font-size: 10px;
+        transform: matrix(1,0,0,1,0,-30);
+        &__text{
+            font-size: 12px;
+            fill: $blue-1;
+        }
+        &__line{
+            stroke:$blue-1;
+            stroke-width:1;
+        }
+    }
+    &__bars{
+        fill: $blue-1;
+        stroke: transparent;
+        transform: matrix(1,0,0,1,0,-50);
+    }
+}

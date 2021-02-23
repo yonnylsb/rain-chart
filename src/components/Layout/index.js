@@ -2,14 +2,18 @@ import React, { useContext } from 'react';
 import Container from '../Container';
 import Slider from '../Slider';
 import rainchartConstants from '../../common/constants';
-import Pressure from '../../components/Pressure';
+import ChanceOfRain from '../../components/ChanceOfRain';
+import AmountOfRain from '../AmountOfRain';
 import { SlidersContext } from '../../providers/slidersContext';
 import './Layout.scss';
 
 function Layout(props){
     const {
+        pressureGraph,
         setPressureGraph,
-        setTemperatureGraph
+        temperatureGraph,
+        setTemperatureGraph,
+        daysValues
     } = useContext(SlidersContext);
     return (
         <section className="layout">
@@ -20,7 +24,7 @@ function Layout(props){
                     min={rainchartConstants.pressure.min}
                     max={rainchartConstants.pressure.max}
                 />
-                <Pressure
+                <ChanceOfRain
                     minX={0}
                     maxX={7}
                     stepX={1}
@@ -29,6 +33,9 @@ function Layout(props){
                     maxY={100}
                     stepY={20}
                     textY="% CHANCE OF RAIN"
+                    daysValues={daysValues}
+                    pressureGraph={pressureGraph}
+                    temperatureGraph={temperatureGraph}
                 />
             </Container>
             <Container>
@@ -38,15 +45,16 @@ function Layout(props){
                     min={rainchartConstants.temperature.min}
                     max={rainchartConstants.temperature.max}
                 />
-                <Pressure
+                <AmountOfRain
                     minX={0}
                     maxX={7}
                     stepX={1}
                     textX="DAYS"
                     minY={0}
-                    maxY={100}
+                    maxY={200}
                     stepY={20}
                     textY="% AMOUNT OF RAIN"
+                    daysValues={daysValues}
                 />
             </Container>
         </section>

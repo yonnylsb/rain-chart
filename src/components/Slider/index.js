@@ -1,8 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Slider.scss'
 
 function Slider(props){
-    const [sliderValue, setSliderValue] = useState(props.min || 0); 
+    const calcDefault = props.max - Math.floor((props.max - props.min)/2);
+    const [sliderValue, setSliderValue] = useState(calcDefault || 0);
+
+    useEffect(()=>{
+        props.onSliderChange(calcDefault);
+    }, []);
 
     return (
         <form className="slider">
